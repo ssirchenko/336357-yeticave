@@ -1,8 +1,18 @@
 <?php
-$is_auth = (bool) rand(0, 1);
+// устанавливаем часовой пояс в Московское время
+date_default_timezone_set('Europe/Moscow');
 
-$user_name = 'Константин';
-$user_avatar = 'img/user.jpg';
+// записать в эту переменную оставшееся время в этом формате (ЧЧ:ММ)
+$lot_time_remaining = "00:00";
+
+// временная метка для полночи следующего дня
+$tomorrow = strtotime('tomorrow midnight');
+
+// временная метка для настоящего времени
+$now = time();
+
+// далее нужно вычислить оставшееся время до начала следующих суток и записать его в переменную $lot_time_remaining
+// ...
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -27,9 +37,13 @@ $user_avatar = 'img/user.jpg';
         <a class="main-header__add-lot button" href="add-lot.html">Добавить лот</a>
 
         <nav class="user-menu">
-
-        <!-- здесь должен быть PHP код для показа аватара пользователя -->
-
+            <div class="user-menu__image">
+                <img src="img/user.jpg" width="40" height="40" alt="Пользователь">
+            </div>
+            <div class="user-menu__logged">
+                <p>Константин</p>
+                <a href="#">Выйти</a>
+            </div>
         </nav>
     </div>
 </header>
@@ -86,7 +100,7 @@ $user_avatar = 'img/user.jpg';
                             <span class="lot__cost">10 999<b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
-                            16:54:12
+                            <?=$lot_time_remaining;?>
                         </div>
                     </div>
                 </div>
