@@ -1,7 +1,7 @@
 # Личный проект «YetiCave» 
 
-* Студент: [Кекс](https://up.htmlacademy.ru/php/1/user/336357).
-* Наставник: `Сенкевич Кирилл`.
+* Студент: [Кекс](https://up.htmlacademy.ru/php/5/user/336357).
+* Наставник: [Сенкевич Кирилл](https://up.htmlacademy.ru/php/5/user/4523453).
 
 ---
 
